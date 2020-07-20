@@ -67,3 +67,11 @@ const innerFunc = () => {
 
 ### Recommendation / Exercises
 * I recommend [csbin](http://csbin.io/closures) have exercises about Closures, Scope, and Execution Context
+
+# Promises
+About **promises** i will not go into details, just suggest [this article by Gokul N K](https://medium.com/better-programming/understanding-promises-in-javascript-13d99df067c1) 
+
+
+### Recommendation / Exercises
+* I recommend [csbin](http://csbin.io/async) have exercises about Asynchronicity
+
