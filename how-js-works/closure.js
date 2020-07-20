@@ -36,3 +36,20 @@ console.log(plusTen2());
 // [[scope]] counter = 20
 console.log(plusTen());
 // => 30
+
+/*
+    Other examples 
+*/
+
+function addBy(x) {
+    function innerFunc(y) {
+        return x + y;
+    }
+    return innerFunc;
+}
+
+// [[scope]] x = 2
+const addBy2 = addBy(2);
+
+console.log(addBy2(10));
+console.log(addBy2(20));
