@@ -64,3 +64,6 @@ const innerFunc = () => {
     return counter;
 }
 ```
+
+### Recommendation / Exercises
+* I recommend [csbin](http://csbin.io/closures) have exercises about Closures, Scope, and Execution Context
