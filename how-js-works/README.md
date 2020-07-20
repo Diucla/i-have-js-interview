@@ -14,3 +14,53 @@ You can see more here [Arrow function expressions](https://developer.mozilla.org
 
 ### Recommendation / Exercises
 * I recommend [csbin](http://csbin.io/callbacks) have a lot of exercises about Callbacks and Higher-Order Functions
+
+# Closure
+A **closure** is a feature in JavaScript where an inner function has access to the outer (enclosing) function’s variables — a scope chain.
+The closure has three scope chains:
+
+* it has access to its own scope — variables defined between its curly brackets
+* it has access to the outer function’s variables
+* it has access to the global variables
+
+```
+function outerFunc() {
+    let counter = 0;
+    const innerFunc = () => {
+        const ten = 10;
+        counter += ten;
+        return counter;
+    }
+    return innerFunc;
+}
+```
+
+Here we have two functions:
+
+* an outer function `outerFunc` which has a variable `counter`, and returns the `innerFunc` function;
+
+* an inner function `innerFunc` which has its `const` called `ten`, and that accesses an outer variable `counter`, within its function body
+
+
+Let us now invoke the `outerFunc()` function, and store the result of the `outerFunc()` function in a const `plusTen`. 
+``` 
+const plusTen = outerFunc();
+```
+
+**Explanation**
+
+When we invoke the `outerFunc()`: 
+1. variable `counter` is created and its value is set to 0;
+2. The next line is a function declaration, so nothing to execute.
+3. On the last line, `return innerFunc` looks for a variable called `innerFunc`, finds that this variable `innerFunc` is actually a function, and so returns the entire body of the function `innerFunc`.
+4. The contents returned by the return statement are stored in `plusTen`, and an important note, `plusTen` will come with some hidden property called [[scope]] It's like a  ‘backpack’ that comes with what 'inherits' from the `outerFunc()` function, that's the magic of **Closures**
+
+Thus, `plusTen` will store the following:
+```
+ [[scope]] // counter = 0
+const innerFunc = () => {
+    const ten = 10;
+    counter += ten;
+    return counter;
+}
+```
