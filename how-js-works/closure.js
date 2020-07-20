@@ -41,15 +41,16 @@ console.log(plusTen());
     Other examples 
 */
 
-function addBy(x) {
-    function innerFunc(y) {
-        return x + y;
-    }
-    return innerFunc;
+// we can update the function to this
+const addBy = x => {
+    return y => x + y;
 }
 
+// or this
+const _addBy = x => y => x + y;
+
 // [[scope]] x = 2
-const addBy2 = addBy(2);
+const addBy2 = _addBy(2);
 
 console.log(addBy2(10));
 console.log(addBy2(20));
