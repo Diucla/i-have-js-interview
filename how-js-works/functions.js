@@ -45,8 +45,8 @@ function copyArrayAndManipulate(array, instructions) {
     return output;
 }
 
-function multiplyBy2(input) {
-    return input * 2;
-}
+// updating multiplyBy2 to arrow function we have
+const multiplyBy2 = input => input * 2;
+
 const result = copyArrayAndManipulate([1, 2, 3], multiplyBy2);
 console.log(result);
