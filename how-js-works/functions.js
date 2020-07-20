@@ -49,4 +49,7 @@ function copyArrayAndManipulate(array, instructions) {
 const multiplyBy2 = input => input * 2;
 
 const result = copyArrayAndManipulate([1, 2, 3], multiplyBy2);
-console.log(result);
+
+// or we can add multiplyBy2 directly in our copyArrayAndManipulate
+const result2 = copyArrayAndManipulate([1, 2, 3], input => input * 2);
+console.log(result2);

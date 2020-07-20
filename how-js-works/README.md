@@ -11,3 +11,6 @@ You can see more here [Understanding Higher-Order Functions in JavaScript](https
 An arrow function expression is a syntactically compact alternative to a regular function expression, although without its own bindings to the this, arguments, super, or new.target keywords. Arrow function expressions are ill suited as methods, and they cannot be used as constructors. 
 
 You can see more here [Arrow function expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+
+### Recommendation / Exercises
+* I recommend [csbin](http://csbin.io/callbacks) have a lot of exercises about Callbacks and Higher-Order Functions
