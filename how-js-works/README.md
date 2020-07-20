@@ -75,3 +75,8 @@ About **promises** i will not go into details, just suggest [this article by Gok
 ### Recommendation / Exercises
 * I recommend [csbin](http://csbin.io/async) have exercises about Asynchronicity
 
+# Classes & Prototypes (OOP)
+
+
+
+
