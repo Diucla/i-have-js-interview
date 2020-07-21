@@ -101,6 +101,51 @@ const promise = createAudioFileAsync(audioSettings);
 promise.then(successCallback, failureCallback);
 ```
 
+## Chaining
+A common need is to execute two or more asynchronous operations back to back, where each subsequent operation starts when the previous operation succeeds, with the result from the previous step. We accomplish this by creating a **promise chain**.
+
+In the old days, doing several asynchronous operations in a row would lead to the classic callback pyramid of doom:
+
+```
+doSomething(result => {
+    doSomethingElse(result, newResult => {
+        doThirdThing(newResult, finalResult => {
+            console.log(`Got the final result: ${finalResult}`);
+        }, failureCallback);
+    }, failureCallback);
+}, failureCallback);
+```
+
+With modern functions, we attach our callbacks to the returned promises instead, forming a promise chain:
+
+```
+doSomething()
+    .then(result => doSomethingElse(result))
+    .then(newResult => doThirdThing(newResult))
+    .then(finalResult => {
+        console.log(`Got the final result: ${finalResult}`);
+    })
+    .catch(failureCallback);
+```
+
+## Error propagation
+
+If there's an exception, the browser will look down the chain for .catch() handlers or onRejected. This is very much modeled after how synchronous code works:
+
+This symmetry with asynchronous code culminates in the async/await syntactic sugar in ECMAScript 2017:
+```
+async function foo() {
+    try {
+        const result = await doSomething();
+        const newResult = await doSomethingElse(result);
+        const finalResult = await doThirdThing(newResult);
+        console.log(`Got the final result: ${finalResult}`);
+    } catch (error) {
+        failureCallback(error);
+    }
+}
+```
+
 ### Recommendation / Exercises
 * [article by Gokul N K](https://medium.com/better-programming/understanding-promises-in-javascript-13d99df067c1) 
 
