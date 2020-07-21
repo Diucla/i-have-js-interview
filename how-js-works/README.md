@@ -101,10 +101,9 @@ const promise = createAudioFileAsync(audioSettings);
 promise.then(successCallback, failureCallback);
 ```
 
-About **promises** i will not go into details, just suggest [this article by Gokul N K](https://medium.com/better-programming/understanding-promises-in-javascript-13d99df067c1) 
-
-
 ### Recommendation / Exercises
+* [article by Gokul N K](https://medium.com/better-programming/understanding-promises-in-javascript-13d99df067c1) 
+
 * I recommend [csbin](http://csbin.io/async) have exercises about Asynchronicity
 
 # Classes & Prototypes (OOP)
