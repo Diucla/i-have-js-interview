@@ -69,6 +69,38 @@ const innerFunc = () => {
 * I recommend [csbin](http://csbin.io/closures) have exercises about Closures, Scope, and Execution Context
 
 # Promises
+The **Promise** object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.
+
+Essentially, a promise is a returned object to which you attach callbacks, instead of passing callbacks into a function.
+
+Imagine a function, createAudioFileAsync(), which asynchronously generates a sound file given a configuration record and two callback functions, one called if the audio file is successfully created, and the other called if an error occurs.
+
+Here's some code that uses `createAudioFileAsync()`:
+
+```
+const successCallback = result => {
+    console.log(`Audio file ready at URL:  ${result}`);
+}
+
+const failureCallback = error => {
+    console.error(`Error generating audio file: ${error}`);
+}
+
+createAudioFileAsync(audioSettings, successCallback, failureCallback);
+```
+Modern functions return a promise that you can attach your callbacks to instead:
+
+If createAudioFileAsync() were rewritten to return a promise, using it could be as simple as this:
+
+`createAudioFileAsync(audioSettings).then(successCallback, failureCallback);`
+
+That's shorthand for:
+
+```
+const promise = createAudioFileAsync(audioSettings); 
+promise.then(successCallback, failureCallback);
+```
+
 About **promises** i will not go into details, just suggest [this article by Gokul N K](https://medium.com/better-programming/understanding-promises-in-javascript-13d99df067c1) 
 
 
