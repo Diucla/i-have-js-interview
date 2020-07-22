@@ -71,35 +71,17 @@ const innerFunc = () => {
 # Promises
 The **Promise** object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.
 
-Essentially, a promise is a returned object to which you attach callbacks, instead of passing callbacks into a function.
+A **Promise** is a proxy for a value not necessarily known when the promise is created. It allows you to associate handlers with an asynchronous action's eventual success value or failure reason. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise to supply the value at some point in the future.
 
-Imagine a function, createAudioFileAsync(), which asynchronously generates a sound file given a configuration record and two callback functions, one called if the audio file is successfully created, and the other called if an error occurs.
+A **Promise** is in one of these states:
 
-Here's some code that uses `createAudioFileAsync()`:
+* **pending**: initial state, neither fulfilled nor rejected.
+* **fulfilled**: meaning that the operation completed successfully.
+* **rejected**: meaning that the operation failed.
 
-```
-const successCallback = result => {
-    console.log(`Audio file ready at URL:  ${result}`);
-}
+A pending promise can either be fulfilled with a value, or rejected with a reason (error). When either of these options happens, the associated handlers queued up by a promise's then method are called. If the promise has already been fulfilled or rejected when a corresponding handler is attached, the handler will be called, so there is no race condition between an asynchronous operation completing and its handlers being attached.
 
-const failureCallback = error => {
-    console.error(`Error generating audio file: ${error}`);
-}
-
-createAudioFileAsync(audioSettings, successCallback, failureCallback);
-```
-Modern functions return a promise that you can attach your callbacks to instead:
-
-If createAudioFileAsync() were rewritten to return a promise, using it could be as simple as this:
-
-`createAudioFileAsync(audioSettings).then(successCallback, failureCallback);`
-
-That's shorthand for:
-
-```
-const promise = createAudioFileAsync(audioSettings); 
-promise.then(successCallback, failureCallback);
-```
+As the `Promise.prototype.then()` and `Promise.prototype.catch()` methods return promises, they can be chained.
 
 ## Chaining
 A common need is to execute two or more asynchronous operations back to back, where each subsequent operation starts when the previous operation succeeds, with the result from the previous step. We accomplish this by creating a **promise chain**.
