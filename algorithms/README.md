@@ -25,3 +25,8 @@ Know Thy Complexities: https://www.bigocheatsheet.com/
 |O(n^2)	      | Double nested loops |
 |O(n^3)	      | Triple nested loops|
 
+## Memoization
+
+Memoization is the programmatic practice of making long recursive/iterative functions run much faster. By **caching the values that the function returns after its initial execution**.
+
+When we input the same value into our memoized function, it returns the value stored in the cache instead of running the function again, thus boosting performance. No longer does your program have to recalculate every number to get a result.
