@@ -10,7 +10,6 @@
     and return the factorial of n
 */
 
- 
 // first we create the cache object to store our function returns
 const cache = {}
 
@@ -27,4 +26,21 @@ const memoFactorial = n => {
     }
 }
 
-console.log(memoFactorial(6));
+// we can improve memoization using Closure
+const memoFactorial2 = () => {
+    const cache = {};
+    return n => {
+        if (n in cache) return cache[n];
+        else if (n === 0) return 1;
+        else {
+            const result = memoFactorial(n - 1) * n;
+            cache[n] = result;
+            return result;
+        }
+    }
+}
+
+console.log(memoFactorial(100));
+
+const factorial = memoFactorial2();
+console.log(factorial(5));
