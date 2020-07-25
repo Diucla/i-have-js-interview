@@ -40,7 +40,24 @@ const memoFactorial2 = () => {
     }
 }
 
-console.log(memoFactorial(100));
+// console.log(memoFactorial(7));
 
-const factorial = memoFactorial2();
-console.log(factorial(5));
+// const factorial = memoFactorial2();
+// console.log(factorial(5));
+
+/*
+    ================ Exercise 2 ===================
+    Using Memoization, write a function, `fibonacci`, that return a value given 
+    an index N as input for the Fibonacci sequence.
+*/
+const fibonacci = (n, cache) => {
+    cache = cache || {};
+
+    if (cache[n]) return cache[n];
+
+    if (n <= 1) return 1;
+
+    return cache[n] = fibonacci(n - 1, cache) + fibonacci(n - 2, cache);
+}
+
+console.log(fibonacci(11));
