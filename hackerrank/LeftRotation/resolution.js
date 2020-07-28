@@ -12,9 +12,15 @@ function rotLeft(a, d) {
     return a;
 }
 
+// another variant
+function rotLeft2(a, d) {
+    for (let i = 0; i < d; i++) a.push(a.shift());
+    return a;
+}
+
 const d = 4;
 
 let arr = [1, 2, 3, 4, 5];
 
-console.log(rotLeft(arr, d));
+console.log(rotLeft2(arr, d));
 // expected result => [ 5, 1, 2, 3, 4 ]
