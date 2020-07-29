@@ -11,7 +11,9 @@ I create this repo because i have a Technical Javascript Interview. So here i wi
 The main purpose of this repository is to prepare myself, for the interview i have in a few weeks. I hope to make at least two commits a day explaining a concept or a particularity of javascript, I will always try to use ECMAScript 2015.
 
 ## IDE
-I'll be use VSCode, to run my javascript code i installed [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner), to execute a code just click ***Control*** + ***Option*** + ***N*** (or ***Control*** + ***Alt*** + ***N*** on Windows)
+I'll be use VSCode, to run my javascript code i installed [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner), to execute a code just click ***Control*** + ***Option*** + ***N*** (or ***Control*** + ***Alt*** + ***N*** on Windows).
+
+I also enabled **Auto Save** with the option `File > Auto Save`.
 
 ## What i'll see?
 I hope to see first, content about how javascript works, i am talking about Functions & Callbacks, Closure, Promises, some of the concepts i will not go into further, because I already know. I also hope to address issues about Data Structures, Big O, Sorting and Search Algorithms. if i have time i will solve some hackerrank algorithms
