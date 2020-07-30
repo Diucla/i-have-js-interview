@@ -38,5 +38,16 @@ Print an integer denoting the minimum number of bribes needed to get the queue i
 3
 Too chaotic
 ```
+## Having Fun
 
+*"It must print an integer representing the minimum number of bribes necessary, or Too chaotic if the line configuration is not possible."*
 
+One of the simplest way to solve this problem, is to find the number of bribes in the queue. Let's analyse like this:
+
+**Note:** *The queue in real life starts from position **1**, and the arrays in javascript starts form **0**, so to find currect position of an element we must add **1**, `queue[i] = i + 1`.*
+
+If the element in position **i**, `queue[i]`, is less then `(i + 1)`, that means that this element was bribe 
+    
+* to know how many times he was bribes we can use this: `(i + 1) - arr[i]`
+
+* what if one element receives a bribe and then bribes the other? in this case after we check if the element was bribe we must check if the element is greater then their next element `q[i] > q[i + 1]`
