@@ -47,6 +47,7 @@ Let's take note of this:
 * Each Person can be bribed one time by the same person  
 * If an element has numbers greater than it to the left, that means, this element was bribe at least one time, so now, how to find how many times, a Person was bribe? We just have to count the numbers, greater than that element, in the left.
 **Note** we have to start looking from `originalPosition - 1` because the first Person that bribes just do it once. And we will stop in the current position of the element.
+* when the original position is **0** then subtract by 1 we have `0 - 1` negative position, so we have to found the max between 0 and `originalPosition - 1` to avoid negative index
 
 Something like
 
@@ -58,8 +59,8 @@ for (let i = queue.length - 1; i >= 0; i--) {
     originalPosition = queue[i] - 1;
 
     // looping from the originalPosition - 1 until the current position of the element
-    for (let j = originalPosition - 1; j < i; j++) {
-        
+    for (let j = Math.max(0, originalPosition - 1); j < i; j++) {
+
         // check for each element if is greater than current element
         if (queue[i] > queue[i])//TODO
     }
