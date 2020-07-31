@@ -42,12 +42,26 @@ Too chaotic
 
 *"It must print an integer representing the minimum number of bribes necessary, or Too chaotic if the line configuration is not possible."*
 
-One of the simplest way to solve this problem, is to find the number of bribes in the queue. Let's analyse like this:
+Let's take note of this:
+* The normal queue is in ascending order 
+* Each Person can be bribed one time by the same person  
+* If an element has numbers greater than it to the left, that means, this element was bribe at least one time, so now, how to find how many times, a Person was bribe? We just have to count the numbers, greater than that element, in the left.
+**Note** we have to start looking from `originalPosition - 1` because the first Person that bribes just do it once. And we will stop in the current position of the element.
 
-**Note:** *The queue in real life starts from position **1**, and the arrays in javascript starts form **0**, so to find currect position of an element we must add **1**, `queue[i] = i + 1`.*
+Something like
 
-If the element in position **i**, `queue[i]`, is less then `(i + 1)`, that means that this element was bribe 
-    
-* to know how many times he was bribes we can use this: `(i + 1) - arr[i]`
+```
+for (let i = queue.length - 1; i >= 0; i--) {
+    //TODO
 
-* what if one element receives a bribe and then bribes the other? in this case after we check if the element was bribe we must check if the element is greater then their next element `q[i] > q[i + 1]`
+    // arrays starts from 0 so we always have to subtract 1 in queue to find the original position
+    originalPosition = queue[i] - 1;
+
+    // looping from the originalPosition - 1 until the current position of the element
+    for (let j = originalPosition - 1; j < i; j++) {
+        
+        // check for each element if is greater than current element
+        if (queue[i] > queue[i])//TODO
+    }
+}
+```
