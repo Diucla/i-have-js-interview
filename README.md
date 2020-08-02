@@ -23,3 +23,14 @@ I hope to see first, content about how javascript works, i am talking about Func
 * The first course i recommend is from [Will Sentance](https://twitter.com/willsentance) that will help your to have a solid understanding of callbacks and higher-order functions, closure, asynchronous JavaScript, and object-oriented JavaScript. If you have unlimited access to [FrontendMaster](https://frontendmasters.com/) you can see here the full course here [JavaScript: The Hard Parts, v2 by Will Sentance](https://frontendmasters.com/courses/javascript-hard-parts-v2/) if not, you can see on youtube the course [Javascript the Hard Parts by Will Sentance](https://www.youtube.com/watch?v=ZVXrJ4dnUxM&list=PLWrQZnG8l0E5hMTpzCK8WjP3nJ93jUEyk);
 
 * The other course is from [Bianca Gandolfo](https://twitter.com/BiancaGando), in this course you'll practice algorithms with common interview questions using a handful of algorithm techniques. This course is free and you can find here [A Practical Guide to Algorithms with JavaScript](https://frontendmasters.com/courses/practical-algorithms/)
+
+## Directory structure
+
+
+**algorithms**: all about algorithms, how to solve then, complexity and so on.
+
+**hackerrank**: explanation and resolution of Hackerrank problems i gonna start with [Interview Preparation Kit Questions](https://www.hackerrank.com/interview/interview-preparation-kit)
+
+**how-js-works**: some JavaScript concepts about how it works, the basic things we must know
+
+**graphs**: implementation of Graph in JavaScript
