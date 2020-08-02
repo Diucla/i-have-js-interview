@@ -26,3 +26,29 @@ Following are basic primary operations of a Graph −
 ### Recommendation / Exercises
 
 To know more about Graph, please read [Graph Representation](https://www.hackerearth.com/practice/algorithms/graphs/graph-representation/tutorial/).
+
+# Implementation of Graph in JavaScript
+Imagine we have a dataset that contains airports and routes. We can represent the graph as a Map or Object where **each key (node) is an airport and the value (edges) is an array airports that it can connect to**.
+
+Let's implement the basic operations, first we need to initialize the graph as we already know, here i will use Object to do that. In the examples i will implement with Map and Object.
+```
+// initializing the graph as empty object
+let adjacencyList = {}
+```
+## Basic operations
+
+* **Add Node/Vertex**: we have to set our node as a key, and the value for now it's just empty array
+```
+// TODO - receive a node as a parameter
+adjacencyList[node] = [];
+```
+* **Add Edge**: we need two nodes, for each node we will get the value, and add the another node to it
+```
+// TODO - receive two nodes (origin and destination) as a parameter
+
+// get the origin value and push destination
+adjacencyList[origin].push(destination);
+
+// get the destination value and push origin
+adjacencyList[destination].push(origin);
+```
