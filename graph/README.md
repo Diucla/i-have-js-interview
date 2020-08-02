@@ -52,3 +52,11 @@ adjacencyList[origin].push(destination);
 // get the destination value and push origin
 adjacencyList[destination].push(origin);
 ```
+### Representation
+Using our example: *"the set of vertices V = {1,2,3,4} and the set of edges E = {12, 23, 24, 34}"* our **adjacencyList** will be like this:
+
+|   1:   |	[ 2 ]   |
+|:-----:|:---------|
+| **2**: | **[1, 3, 4]** |
+| **3**: | **[2, 4]**    |
+| **4**: | **[2, 3]**    |
