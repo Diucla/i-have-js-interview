@@ -52,3 +52,36 @@ class Graph {
             .filter(element => element !== origin);
     }
 }
+
+// Tests
+
+let nodes = '1 2 3 4'.split(' ');
+
+const edges = [
+    ['1', '2'],
+    ['2', '3'],
+    ['2', '4'],
+    ['3', '4'],
+];
+
+let graph = new Graph();
+
+// Create the Graph
+nodes.forEach((node) => {
+    graph.addNode(node);
+});
+
+edges.forEach((edge) => {
+    graph.addEdge(...edge);
+});
+
+console.log("===== printing the graph ======");
+console.log(graph);
+
+graph.removeEdge("3", "4");
+console.log("===== after removing the edge between 3 and 4 ======");
+console.log(graph);
+
+graph.removeNode("3");
+console.log("===== after removing node 3 ======");
+console.log(graph);
