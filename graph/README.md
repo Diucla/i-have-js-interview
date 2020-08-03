@@ -23,6 +23,10 @@ Following are basic primary operations of a Graph −
 
 * **Add Edge** − Adds an edge between the two vertices of the graph.
 
+* **Remove Edge** − Remove an edge between the two vertices of the graph.
+
+* **Remove Vertex** − Remove a vertex from the graph.
+
 ### Recommendation / Exercises
 
 To know more about Graph, please read [Graph Representation](https://www.hackerearth.com/practice/algorithms/graphs/graph-representation/tutorial/).
@@ -52,6 +56,32 @@ adjacencyList[origin].push(destination);
 // get the destination value and push origin
 adjacencyList[destination].push(origin);
 ```
+* **Remove Edge**: two nodes needed, for each node we get the value and remove the other node from the values
+```
+// TODO - receive two nodes (origin and destination) as a parameter
+
+// get the origin value
+adjacencyList[origin] // loop through the array and return values differents of the destination
+
+// get the destination value
+adjacencyList[destination] // loop through the array and return values differents of the origin
+
+```
+* **Remove Node/Vertex**: get the neighbors of the node and remove the edge between the node and each neighbor, then remove the node
+```
+// TODO - receive a node as a parameter
+
+// get node neighbors
+let neighbors = this.adjacencyList[node];
+
+// loop throught the neighbors
+for (let neighbor of neighbors) 
+// TODO - for each neighbor remove the edge
+
+// delete the node
+delete this.adjacencyList[node];
+```
+
 ### Representation
 Using our example: *"the set of vertices V = {1,2,3,4} and the set of edges E = {12, 23, 24, 34}"* our **adjacencyList** will be like this:
 
