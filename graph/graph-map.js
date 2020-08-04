@@ -39,17 +39,21 @@ class Graph {
         }
 
         // delete the node
-        delete this.adjacencyList.get(node);
+        this.adjacencyList.delete(node);
     }
 
     removeEdge(origin, destination) {
         // get the origin, array of values, and returns elements different of the destination node 
-        this.adjacencyList.get(origin) = this.adjacencyList.get(origin)
+        const originArray = this.adjacencyList.get(origin)
             .filter(element => element !== destination);
 
+        this.adjacencyList.set(origin, originArray);
+
         // get the destination, array of values, and returns elements different of the origin node 
-        this.adjacencyList.get(destination) = this.adjacencyList.get(destination)
+        const destinationArray = this.adjacencyList.get(destination)
             .filter(element => element !== origin);
+
+        this.adjacencyList.set(destination, destinationArray);
     }
 }
 
