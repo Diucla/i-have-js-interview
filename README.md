@@ -1,6 +1,14 @@
 # I have Js Interview
 I create this repo because i have a Technical Javascript Interview. So here i will share the resources i’m using to prepare myself.
 
+## Purpose
+The main purpose of this repository is to prepare myself, for the interview i have in a few weeks. I hope to make at least two commits a day explaining a concept or a particularity of javascript, I will always try to use ECMAScript 2015.
+
+## IDE
+I'll be use VSCode, to run my javascript code i installed [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner), to execute a code just click ***Control*** + ***Option*** + ***N*** (or ***Control*** + ***Alt*** + ***N*** on Windows).
+
+I also enabled **Auto Save** with the option `File > Auto Save`.
+
 ## How to prepare
 
 * **Predict the future**: You can anticipate 90% of the interview questions you’re going to get. “Why do you want this job?” “What’s a tough problem you’ve solved?” If you can’t think of any, Google “most common interview questions.” Write down the top 20 questions you think you’ll get.
@@ -19,14 +27,6 @@ I create this repo because i have a Technical Javascript Interview. So here i wi
 Practice: Everyone gets better with practice. Practice your interview answers—out loud—until you can tell each story clearly and concisely.
 
 About the points mentioned above you can see more [here](https://careers.google.com/how-we-hire/interview/)
-
-## Purpose
-The main purpose of this repository is to prepare myself, for the interview i have in a few weeks. I hope to make at least two commits a day explaining a concept or a particularity of javascript, I will always try to use ECMAScript 2015.
-
-## IDE
-I'll be use VSCode, to run my javascript code i installed [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner), to execute a code just click ***Control*** + ***Option*** + ***N*** (or ***Control*** + ***Alt*** + ***N*** on Windows).
-
-I also enabled **Auto Save** with the option `File > Auto Save`.
 
 ## What i'll see?
 I hope to see first, content about how javascript works, i am talking about Functions & Callbacks, Closure, Promises, some of the concepts i will not go into further, because I already know. I also hope to address issues about Data Structures, Big O, Sorting and Search Algorithms. if i have time i will solve some hackerrank algorithms
