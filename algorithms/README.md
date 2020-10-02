@@ -25,6 +25,13 @@ Know Thy Complexities: https://www.bigocheatsheet.com/
 |O(n^2)	      | Double nested loops |
 |O(n^3)	      | Triple nested loops|
 
+## Time complexity of Common Array methods
+| Complexity  |	methods  |
+|:-----------:|:-----------|
+|O(1)         |	push(), pop()|
+|O(n)	      | shift(), unshift(), splice(), slice(), concat(), indexOf(), forEach(), map(), filter(), reduce()|
+|O(nlogn)	  | sort() |
+
 ## Memoization
 
 Memoization is the programmatic practice of making long recursive/iterative functions run much faster. By **caching the values that the function returns after its initial execution**.
