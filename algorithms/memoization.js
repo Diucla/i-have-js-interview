@@ -14,15 +14,12 @@
 const cache = {}
 
 const memoFactorial = n => {
-    // check if n is in cache or not, if yes just return the value in cache
-    if (n in cache) return cache[n];
+    // check if existe value in cache with key n, if yes just return the value in cache
+    if (cache[n]) return cache[n];
     else if (n === 0) return 1;
     else {
-        // execute the function and put the return in result const
-        const result = memoFactorial(n - 1) * n;
-        // storing the result of our function in cache
-        cache[n] = result;
-        return result;
+        // invoke the function recursively, store the result in cache using key n and return the value
+        return cache[n] = memoFactorial(n - 1) * n;
     }
 }
 
