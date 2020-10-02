@@ -50,9 +50,7 @@ const memoFactorial2 = () => {
     Using Memoization, write a function, `fibonacci`, that return a value given 
     an index N as input for the Fibonacci sequence.
 */
-const fibonacci = (n, cache) => {
-    cache = cache || {};
-
+const fibonacci = (n, cache = {}) => {
     if (cache[n]) return cache[n];
 
     if (n <= 1) return 1;
